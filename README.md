@@ -16,7 +16,7 @@ It's quite easy to use:
     1) First, issue rst
     2) Load the password byte-by-byte into the password\_input port. The lenght of the password is KEY\_SIZE
     3) Issue 768 clocks to perform key expansion
-    4) Wait about 1000 clocks while the module discards the first 1000 weak bytes of the stream.
+    4) Wait 1536 clocks while the module discards the first 1536 weak bytes of the stream (as per rfc4345.txt).
     5) Now you should start receiving the pseudo-random stream via the output bus, one byte every clock. 
        The output\_ready signal signals when a valid byte is present at the output K.
 
